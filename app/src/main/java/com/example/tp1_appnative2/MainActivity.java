@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
          * Si le HashMap d'index est vide, ca veut dire que c'était une mauvaise devinette
          * Donc on incrementre le nombre d'essai échoué à partir de la classe jeu
          * Donc on incrementre le nombre d'essai échoué à partir de la classe jeu
-         * Si le nombre d'erreur dépasse 6, on dirige l'utilisateur vers une autre page pour
+         * Si le nombre d'erreur est à 6, on dirige l'utilisateur vers une autre page pour
          * qu'il puisse rejouer et on recommece cette activité
          * */
         if (indexes.isEmpty()) {
@@ -94,14 +94,7 @@ public class MainActivity extends AppCompatActivity {
                     i.putExtras(b);
                     startActivity(i);
                     this.recreate();
-//                    break;
-//                default:
-//                    Intent i = new Intent(this, Status.class);
-//                    Bundle b = new Bundle();
-//                    b.putString("STATUS", "Vous avez perdu!");
-//                    i.putExtras(b);
-//                    startActivity(i);
-//                    this.recreate();
+                    break;
             }
         }
         /**
